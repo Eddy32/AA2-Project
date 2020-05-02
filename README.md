@@ -9,4 +9,5 @@ Para a criação de tal sistema será utilizada uma rede neuronal que será trei
 Assim, serão utilizadas mais de 500k imagens de pessoas presentes no conjunto de dados do IMDB
 
 ## Extra
-Para mais informação: https://www.overleaf.com/project/5e89ab8835e5c90001e61672
+Para mais informação: https://www.overleaf.com/read/mgwzqpmrbbxn
+
