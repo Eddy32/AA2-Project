@@ -1,5 +1,6 @@
 load('/Users/frito/Downloads/wiki.mat')
 
+
 DOB=[wiki(1:1).dob];
 foto=[wiki(1:1).photo_taken];
 genero=[wiki(1:1).gender];
