@@ -15,4 +15,4 @@ Assim, serão utilizadas mais de 500k imagens de pessoas presentes no conjunto d
 
 ## Extra
 Para mais informação: https://www.overleaf.com/read/mgwzqpmrbbxn
-
+https://drive.google.com/drive/folders/1qb2-IsXkw4G-dug9CNsiD_-8PtruLJYU?usp=sharing (usar mais para a frente no readme)
