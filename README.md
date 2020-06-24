@@ -41,11 +41,11 @@ Após todo o trabalho desenvolvido, consideramos de sucesso as seguintes abordag
 
 Esta foi a rede considerada de mais sucesso tanto para a previsão das idades como de género. Esta, como se pode observar pelas figura abaixo, para o problema de idade obteve uma accuracy total de 44.16% (a 15% do state of the art) e uma precisão por 1 Off de 82.64% (< 8% do state of the art). Não só consideramos de sucesso os valores obtidos pela "elevada" precisão para o problema que é, como pela aproximação significativa ao SotA numa versão do problema, que a nosso ver é um pouco mais complexa.
 
-![acc1off](./img/acc1off.png)
+
 
 Consideramos também relevante os valores de 1Off e de Accuracy para cada bin específico, de modo a tornar os resultados obtidos mais palpáveis (percebendo assim melhor onde esta acerta e erra).
 
-![acc1offBC](./img/acc1offBC.png)
+![accBC](./img/accBC.png) ![1offBC](./img/1offBC.png) 
 
 * #### Xception Género
 
