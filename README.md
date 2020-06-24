@@ -14,7 +14,7 @@ Todavia, estes eram compostos por intervalos não contíguos, ou seja, os bins n
 
 Visto que todo o processamento e treino das redes é algo bastante penoso a um nivel computacional, decidimos optar pela utilização de tensorflow-gpu. Deste modo, fomos capazes de treinar as redes utilizando os recursos disponibilizados pela placa gráfica, adicionalmente, visto que as redes a serem utilizadas serão CNN's, o aumento de performance é significativo (maior parte dos calculos são produtos matriciais que ocorrem muito mais eficientemente numa gráfica dedicada, devido ao elevado número de CUDA cores).
 
-![1.2](./img/sota.png)
+![sota](./img/SotA.png)
 Tal como se pode ver na imagem acima, este é o estado da arte relativamente a este problema e apesar da nossa abordagem ser distinta e num dataset diferente, iremos ao máximo tentar aproximar-nos desta métrica (sendo que a utilização de 8 bins contíguo torna bastante mais complexa esta meta).
 
 # Abordagem:
@@ -45,7 +45,7 @@ Esta foi a rede considerada de mais sucesso tanto para a previsão das idades co
 
 Consideramos também relevante os valores de 1Off e de Accuracy para cada bin específico, de modo a tornar os resultados obtidos mais palpáveis (percebendo assim melhor onde esta acerta e erra).
 
-![accBC](./img/accBC.png) ![1offBC](./img/1offBC.png) 
+![accBC](./img/accBC.png) ![1offBC](./img/1OffBC.png) 
 
 * #### Xception Género
 
