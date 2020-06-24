@@ -45,7 +45,7 @@ Esta foi a rede considerada de mais sucesso tanto para a previsão das idades co
 
 Consideramos também relevante os valores de 1Off e de Accuracy para cada bin específico, de modo a tornar os resultados obtidos mais palpáveis (percebendo assim melhor onde esta acerta e erra).
 
-![accBC](./img/accBC.png) ![1offBC](./img/1OffBC.png) 
+![accBC](./img/accBC.png |  width=200) ![1offBC](./img/1OffBC.png | width=200) 
 
 * #### Xception Género
 
