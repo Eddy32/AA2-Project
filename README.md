@@ -36,9 +36,24 @@ Por fim, consideramos também interessante, uma tentativa de abordagem a este de
 considerando que até foi de relativo sucesso para a abordagem em si (desvio até ±10anos), mas sempre pior que a solução obtida com a Xception.
 
 # Resultados Obtidos:
-Para a criação de tal sistema será utilizada uma rede neuronal que será treinada com os seguintes dados: https://data.vision.ee.ethz.ch/cvl/rrothe/imdb-wiki/
-Assim, serão utilizadas mais de 500k imagens de pessoas presentes no conjunto de dados do IMDB
+Após todo o trabalho desenvolvido, consideramos de sucesso as seguintes abordagens (sendo essas expostas aqui, mas todos os notebooks apresentam os resultados obtidos):
+* #### Xception Idade
 
-## Extra
-Para mais informação: https://www.overleaf.com/read/mgwzqpmrbbxn
-https://drive.google.com/drive/folders/1qb2-IsXkw4G-dug9CNsiD_-8PtruLJYU?usp=sharing (usar mais para a frente no readme)
+Esta foi a rede considerada de mais sucesso tanto para a previsão das idades como de género. Esta, como se pode observar pelas figura abaixo, para o problema de idade obteve uma accuracy total de 44.16% (a 15% do state of the art) e uma precisão por 1 Off de 82.64% (< 8% do state of the art). Não só consideramos de sucesso os valores obtidos pela "elevada" precisão para o problema que é, como pela aproximação significativa ao SotA numa versão do problema, que a nosso ver é um pouco mais complexa.
+
+![acc1off](./img/acc1off.png)
+
+Consideramos também relevante os valores de 1Off e de Accuracy para cada bin específico, de modo a tornar os resultados obtidos mais palpáveis (percebendo assim melhor onde esta acerta e erra).
+
+![acc1offBC](./img/acc1offBC.png)
+
+* #### Xception Género
+
+Para a determinação do género, consideramos de extremo sucesso e precisão a rede Xception, tendo assim obtido uma accuracy de 91.38% em fase de testes.
+
+* #### Regressão
+Apesar de esta abordagem não nos ter dado resultados tão bons como previamente obtidos (utlização da Xception), consideramos que um mae de ±10 (ou seja, que uma previsão estará até ±10 anos errada), algo relativamente positivo. 
+
+## Conclusão
+Após todo o trabalho concluído, consideramos que obtivemos uma resolução de sucesso, sendo esta bastante capaz de responder as perguntas para as quais foi criada. Consideramos também, que na fase de escolha do projeto fomos um pouco "inocentes" na escolha deste tema, sem uma devida análise da complexidade da mesma, todavia foi um excelente desafio e meio de obtençao de conhecimentos extras, numa área tão crítica e atualmente relevante como Data Science.
+
