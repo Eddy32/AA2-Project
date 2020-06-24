@@ -1,5 +1,6 @@
 # AA2-Project
-Repositório dedicado ao projeto da unidade curricular de Aprendizagem Automática 2
+Repositório dedicado ao projeto da unidade curricular de Aprendizagem Automática 2 do perfil de Data Science. Este repositório contém todos os ficheiros relativos à elaboração do trabalho prático e necessários ao seu teste, todavia devido à dimensão dos datasets e dos modelos guardados, disponibilizamos estes dados nos seguintes links:
+  * [Versões reduzidas do dataset já pronto a ser utilizado em notebooks de redes](https://drive.google.com/drive/folders/1qb2-IsXkw4G-dug9CNsiD_-8PtruLJYU?usp=sharing)
 
 # Objetivo:
 Criar um sistema de inferencia de idades e genero utilizando apenas imagens do rosto
