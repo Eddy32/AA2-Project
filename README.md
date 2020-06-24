@@ -23,11 +23,19 @@ Numa primeira instancia, foi necessário o processamento do ficheiro matlab prov
 Neste ponto, somos capazes de nos afastar do dataset "nativo" e apenas usar estes ficheiros gerados para os treinos das redes, podendo assim faze-lo em qualquer máquina sem necessidade da pasta com todas as fotos. Aqui, a abordagem a seguir foi a criação de múltiplas redes distintas e sucessivo teste das mesmas, de modo a obter a melhor solução possível para o problema proposto. 
 
 Assim, a nossa linha de teste foi a seguinte:
-* **[PCA](https://github.com/Eddy32/AA2-Project/blob/master/PCAAge.ipynb):** fase inicial de utilização das *principal components*
-*  **[VGG_Face](https://github.com/Eddy32/AA2-Project/blob/master/PCAAge.ipynb):**
+* **[PCA Age](https://github.com/Eddy32/AA2-Project/blob/master/PCAAge.ipynb):** fase inicial de utilização das *principal components*
+*  **[VGG_Face Age](https://github.com/Eddy32/AA2-Project/blob/master/VGGFaceAge.ipynb):** fase intemédia utilização da rede VGG_Face
+*  **[Xception Age](https://github.com/Eddy32/AA2-Project/blob/master/XceptionAge.ipynb):** fase conclusiva -> melhor rede para o problema de idade
+*  **[Xception Gender](https://github.com/Eddy32/AA2-Project/blob/master/GenderXception.ipynb):** utilização da Xception para classificação do géreno
+
+Por fim, consideramos também interessante, uma tentativa de abordagem a este desafio, como um problema de regressão. Deste modo desenvolvemos um notebook com 2 redes diferentes para a previsão de idades, tentando obter sucesso também por esta frente:
+*  **[Previsão Idade Regressão](https://github.com/Eddy32/AA2-Project/blob/master/AgeEstimationRegression.ipynb):** abordagem por regressão ao problema de estimação de idade
 
 
-# Dados:
+
+considerando que até foi de relativo sucesso para a abordagem em si (desvio até ±10anos), mas sempre pior que a solução obtida com a Xception.
+
+# Resultados Obtidos:
 Para a criação de tal sistema será utilizada uma rede neuronal que será treinada com os seguintes dados: https://data.vision.ee.ethz.ch/cvl/rrothe/imdb-wiki/
 Assim, serão utilizadas mais de 500k imagens de pessoas presentes no conjunto de dados do IMDB
 
