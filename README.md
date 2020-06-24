@@ -49,6 +49,10 @@ Para a determinação do género, consideramos de extremo sucesso e precisão a 
 * #### Regressão
 Apesar de esta abordagem não nos ter dado resultados tão bons como previamente obtidos (utlização da Xception), consideramos que um mae de ±10 (ou seja, que uma previsão estará até ±10 anos errada), algo relativamente positivo. 
 
+*  #### Exemplos
+
+![ines](./img/ines59.png) ![dia](./img/dias18anos.png)
+
 ## Conclusão
 Após todo o trabalho concluído, consideramos que obtivemos uma resolução de sucesso, sendo esta bastante capaz de responder as perguntas para as quais foi criada. Consideramos também, que na fase de escolha do projeto fomos um pouco "inocentes" na escolha deste tema, sem uma devida análise da complexidade da mesma, todavia foi um excelente desafio e meio de obtenção de conhecimentos extras, numa área tão crítica e atualmente relevante como Data Science.
 
