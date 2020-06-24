@@ -4,10 +4,10 @@ Repositório dedicado ao projeto da unidade curricular de Aprendizagem Automáti
   * [Modelos já treinados guardados para futuro carregamento](https://drive.google.com/drive/folders/1pg_f4ER_v8yb7BHu3CNvHjBCAqFC6AV7?usp=sharing)
   * [Dataset original completo pré-processamento](https://data.vision.ee.ethz.ch/cvl/rrothe/imdb-wiki/)
 
-Este trabalho consiste no desenvolvimento de redes neuronais, capazes de identificar o genero e a idade de uma pessoa, utilizando apenas uma foto do seu rosto (especificamente de 256*256 pixeis).
+**Este trabalho consiste no desenvolvimento de redes neuronais, capazes de identificar o genero e a idade de uma pessoa, utilizando apenas uma foto do seu rosto (especificamente de 256*256 pixeis).**
 
 # Considerações Iniciais:
-Visto estarmos perante uma enorme área como Data Science, consideramos relevante para o trabalho, uma fase inicial de pesquisa relativa ao estado da arte de um problema como este, de modo a criar perspetivas realistas dos resultados possiveis e esperados de obter.
+Visto estarmos perante uma enorme área como Data Science, consideramos relevante para o trabalho uma fase inicial de pesquisa relativa ao estado da arte de um problema como este, de modo a criar perspetivas realistas dos resultados possiveis e esperados de obter.
 
 Assim, verificamos uma enorme consistência entre toda a comunidade, relativamente à abordagem como problema de classificação e a utilização de 8 bins standard (em vez de prever a idade exata da pessoa, prever dentro de um certo intervalo pré-definido).
 Todavia, estes eram compostos por intervalos não contíguos, ou seja, os bins não eram adjacentes (eg, 25-32 e 38-43), algo que consideramos uma "batota" e "simplificação" do problema, tendo em conta que no nosso dataset possuiamos entradas para todos as idades. Deste modo, utilizamos na mesma 8 bins que mantivessem a distribuição normal dos dados, mas que fossem contínuos, de modo a não ser necessário descartar entradas do dataset. Todavia, apenas consideramos fotos de pessoas entre 18 a 65 anos, visto que estas extremidades eram muito reduzidas no dataset e inconclusivas para aprendizagem.
@@ -15,7 +15,7 @@ Todavia, estes eram compostos por intervalos não contíguos, ou seja, os bins n
 Visto que todo o processamento e treino das redes é algo bastante penoso a um nivel computacional, decidimos optar pela utilização de tensorflow-gpu. Deste modo, fomos capazes de treinar as redes utilizando os recursos disponibilizados pela placa gráfica, adicionalmente, visto que as redes a serem utilizadas serão CNN's, o aumento de performance é significativo (maior parte dos calculos são produtos matriciais que ocorrem muito mais eficientemente numa gráfica dedicada, devido ao elevado número de CUDA cores).
 
 ![sota](./img/SotA.png)
-Tal como se pode ver na imagem acima, este é o estado da arte relativamente a este problema e apesar da nossa abordagem ser distinta e num dataset diferente, iremos ao máximo tentar aproximar-nos desta métrica (sendo que a utilização de 8 bins contíguo torna bastante mais complexa esta meta).
+Tal como se pode ver na imagem acima, este é o estado da arte relativamente a este problema e apesar da nossa abordagem ser distinta e num dataset diferente, iremos ao máximo tentar aproximar-nos desta métrica (sendo que a utilização de 8 bins contíguo torna bastante mais complexa esta meta). Adicionalemente, utilizaremos também a métrica de 1Off (consideramos correta a classifcação da idade se for num bin adjacente - permitindo assim melhor avaliar o sucesso do insucesso da rede).
 
 # Abordagem:
 Numa primeira instancia, foi necessário o processamento do ficheiro matlab proveniente do dataset, de modo a gerar-se o result.csv (ficheiro que contem todas as labels de todas as fotos). De seguida, foi necessária a implementação de um notebook que fosse capaz de processar todas estas fotos e gerar ficheiros de dimensão desejada (considerando qual a funcionalidade que se deseja testar e onde -> visto a dimensão dos ficheiros cresce significativamente com o número de fotos) para um posterior processamento.
@@ -32,20 +32,15 @@ Por fim, consideramos também interessante, uma tentativa de abordagem a este de
 *  **[Previsão Idade Regressão](https://github.com/Eddy32/AA2-Project/blob/master/AgeEstimationRegression.ipynb):** abordagem por regressão ao problema de estimação de idade
 
 
-
-considerando que até foi de relativo sucesso para a abordagem em si (desvio até ±10anos), mas sempre pior que a solução obtida com a Xception.
-
 # Resultados Obtidos:
 Após todo o trabalho desenvolvido, consideramos de sucesso as seguintes abordagens (sendo essas expostas aqui, mas todos os notebooks apresentam os resultados obtidos):
 * #### Xception Idade
 
-Esta foi a rede considerada de mais sucesso tanto para a previsão das idades como de género. Esta, como se pode observar pelas figura abaixo, para o problema de idade obteve uma accuracy total de 44.16% (a 15% do state of the art) e uma precisão por 1 Off de 82.64% (< 8% do state of the art). Não só consideramos de sucesso os valores obtidos pela "elevada" precisão para o problema que é, como pela aproximação significativa ao SotA numa versão do problema, que a nosso ver é um pouco mais complexa.
-
-
+Esta foi a rede considerada de mais sucesso tanto para a previsão das idades como de género. Esta para o problema de idade obteve uma accuracy total de 44.16% (a 15% do state of the art) e uma precisão por 1 Off de 82.64% (< 8% do state of the art). Não só consideramos de sucesso os valores obtidos pela "elevada" precisão para o problema que é, como pela aproximação significativa ao SotA numa versão do problema, que a nosso ver, é um pouco mais complexa.
 
 Consideramos também relevante os valores de 1Off e de Accuracy para cada bin específico, de modo a tornar os resultados obtidos mais palpáveis (percebendo assim melhor onde esta acerta e erra).
 
-![accBC](./img/accBC.png) Valor de Accuracy por cada bin ![1offBC](./img/1OffBC.png){:height="50%" width="50%"} Valor de 1Off por cada bin
+![accBC](./img/accBC.png) Valor de Accuracy por cada bin ![1offBC](./img/1OffBC.png) Valor de 1Off por cada bin
 
 * #### Xception Género
 
